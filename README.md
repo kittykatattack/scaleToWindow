@@ -3,7 +3,7 @@ Scale and align a canvas element in the browser
 Use the function `scaleToWindow` to scale an HTML canvas element to
 the maximum size of the browser's window. `scaleToWindow` will also align the canvas for the best vertical or horizontal fit inside the browser window. For example, if you have a canvas that's wider than it is tall, it will be centered vertically inside the browser. If the canvas is taller than it is wide, it will be centered horizontally.
 
-![Alignment](screenShot.png);
+![Alignment](screenShot.png)
 
 Here's how to use `scaleToWindow`:
 ```js
@@ -13,7 +13,7 @@ scaleToWindow(anyCanvasElement, borderColor);
 The optional second argument lets you set the color of the browser's background that borders the canvas. You can supply any RGB, HSLA or Hexadecimal color value, as well as the any HTML color string, like “blue” or “red”. (If you don't supply this optional color, the border will be set to a neutral dark gray: #2C3539.)
 
 The `scaleToWindow` function also returns the `scale` value that the
-canvas was scaled to. You can find it like this:
+canvas is scaled to. You can find it like this:
 ```js
 var scale = scaleToWindow(renderer.view);
 ```
