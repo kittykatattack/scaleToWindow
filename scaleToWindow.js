@@ -1,3 +1,4 @@
+
 function scaleToWindow(canvas, backgroundColor) {
 
   backgroundColor = backgroundColor || "#2C3539";
@@ -72,4 +73,4 @@ function scaleToWindow(canvas, backgroundColor) {
   //5. Return the `scale` value. This is important, because you'll nee this value 
   //for correct hit testing between the pointer and sprites
   return scale;
-};
+}
