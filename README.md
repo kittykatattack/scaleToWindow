@@ -9,7 +9,7 @@ Here's how to use `scaleToWindow`:
 ```js
 scaleToWindow(anyCanvasElement, borderColor);
 ```
-(If you are using [Pixi](https://github.com/GoodBoyDigital/pixi.js/), supply the `renderer.view` as the canvas.)
+(If you are using [Pixi](https://github.com/pixijs/pixi.js), supply the `renderer.view` as the canvas.)
 The optional second argument lets you set the color of the browser's background that borders the canvas. You can supply any RGB, HSLA or Hexadecimal color value, as well as the any HTML color string, like “blue” or “red”. (If you don't supply this optional color, the border will be set to a neutral dark gray: #2C3539.)
 
 The `scaleToWindow` function also returns the `scale` value that the
@@ -35,5 +35,20 @@ call `scaleToWindow` inside a window event listener:
 window.addEventListener("resize", function(event){ 
   scaleToWindow(anyCanvasElement);
 });
+```
+For the best effect, make sure that you set the browser's default margins and
+padding to `0` on all HTML elements. If you don't do this, most
+browsers will add some padding around the canvas borders.  This bit of CSS will do the
+trick:
+```
+<style>* {padding: 0; margin: 0}</style>
+```
+If you prefer, you can add this CSS style using JavaScript in your main program
+like this:
+```
+var newStyle = document.createElement("style");
+var style = "* {padding: 0; margin: 0}";
+newStyle.appendChild(document.createTextNode(style));
+document.head.appendChild(newStyle);
 ```
 
