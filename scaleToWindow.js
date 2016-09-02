@@ -37,6 +37,8 @@ function scaleToWindow(canvas, backgroundColor) {
   var margin;
   if (center === "horizontally") {
     margin = (window.innerWidth - canvas.offsetWidth * scale) / 2;
+    canvas.style.marginTop = 0;
+    canvas.style.marginBottom = 0;
     canvas.style.marginLeft = margin + "px";
     canvas.style.marginRight = margin + "px";
   }
@@ -46,6 +48,8 @@ function scaleToWindow(canvas, backgroundColor) {
     margin = (window.innerHeight - canvas.offsetHeight * scale) / 2;
     canvas.style.marginTop = margin + "px";
     canvas.style.marginBottom = margin + "px";
+    canvas.style.marginLeft = 0;
+    canvas.style.marginRight = 0;
   }
 
   //3. Remove any padding from the canvas  and body and set the canvas
