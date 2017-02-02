@@ -7,7 +7,7 @@ the maximum size of the browser's window. `scaleToWindow` will also align the el
 
 Here's how to use `scaleToWindow`:
 ```js
-scaleToWindow(anyelementElement, borderColor);
+scaleToWindow(anyElement, borderColor);
 ```
 (If you are using [Pixi](https://github.com/pixijs/pixi.js), supply the `renderer.view` as the element.)
 The optional second argument lets you set the color of the browser's background that borders the element. You can supply any RGB, HSLA or Hexadecimal color value, as well as the any HTML color string, like “blue” or “red”. (If you don't supply this optional color, the border will be set to a neutral dark gray: #2C3539.)
